@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    """
+
+    Prints the result of the addition, substract, multiplication
+    and division between two numbers
+
+    """
     a = 10
     b = 5
-
-    add_result = add(a, b)
-    sub_result = sub(a, b)
-    mul_result = mul(a, b)
-    div_result = div(a, b)
-
-    print(f"{a} + {b} = {add_result}")
-    print(f"{a} - {b} = {sub_result}")
-    print(f"{a} * {b} = {mul_result}")
-    print(f"{a} / {b} = {div_result}")
+    print('{:d} + {:d} = {:d}'.format(a, b, add(a, b)))
+    print('{:d} - {:d} = {:d}'.format(a, b, sub(a, b)))
+    print('{:d} * {:d} = {:d}'.format(a, b, mul(a, b)))
+    print('{:d} / {:d} = {:d}'.format(a, b, div(a, b)))
