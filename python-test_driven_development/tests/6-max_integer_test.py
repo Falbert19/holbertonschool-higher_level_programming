@@ -35,5 +35,10 @@ class TestMaxInteger(unittest.TestCase):
         """Test with a list of identical elements."""
         self.assertEqual(max_integer([7, 7, 7, 7]), 7)
 
+    def test_max_integer_middle(self):
+        """Test case where the max integer is in the middle of the list."""
+        self.assertEqual(max_integer([1, 5, 3, 2, 4]), 5)
+
+
 if __name__ == '__main__':
     unittest.main()
