@@ -1,50 +1,17 @@
 #!/usr/bin/python3
-"""
-this module defines a Square class
-"""
-
-
 class Square:
     """
-    represents a Square
+    represents a square
 
-    Attributes:
-    _size (init): size of square, private
+    attributes:
+        __size (int): size of the square, private
     """
-
-
-def __init__(self, size):
-    """
-    Init a Square instance
-
-    args:
-    size (int): size of square
-    """
-
-
-   #!/usr/bin/python3
-"""
-this module defines a Square class
-"""
-
-
-class Square:
-    """
-    represents a Square
-
-    Attributes:
-    _size (init): size of square, private
-    """
-
 
     def __init__(self, size):
         """
-        Init a Square instance
+        initializes a Square
 
-        args:
-        size (int): size of square
+        Args:
+            size (int): sizes of square
         """
-
-
         self.__size = size
-
