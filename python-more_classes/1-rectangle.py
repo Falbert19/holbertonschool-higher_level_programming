@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""this module will define a Rectangle empty"""
+"""this module will define a Rectangle height and witdh"""
 
 
 class Rectangle:
@@ -20,7 +20,7 @@ class Rectangle:
     def width(self):
         """ Retrives th width of rectangle"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -46,7 +46,7 @@ class Rectangle:
         retrieves the height of the rectangle
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
