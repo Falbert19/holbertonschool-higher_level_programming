@@ -51,6 +51,13 @@ class Rectangle:
     def height(self, value):
         """
         retrieves the height of the rectangle
+
+        Args:
+            value (int): new height
+
+        Raises:
+            TypeError: If height is not an integer.
+            ValueError: If height is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
