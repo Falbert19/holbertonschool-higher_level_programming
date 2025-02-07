@@ -12,7 +12,7 @@ def inherits_from(obj, a_class):
     inherited from the specified class; otherwise, returns False
 
     Args:
-        obj: object to check.
+        obj: object to check
         a_class: class to compare
 
     Returns:
