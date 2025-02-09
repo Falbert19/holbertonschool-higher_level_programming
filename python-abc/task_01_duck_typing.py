@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Module defining an abstract base class Shape and its concrete subclasses Circle and Rectangle.
-Also includes a function for handling shape information using duck typing.
+Module defining an abstract base class Shape and its
+concrete subclasses Circle and Rectangle.
+Also includes a function for handling
+shape information using duck typing.
 """
 
 from abc import ABC, abstractmethod
@@ -36,7 +38,11 @@ class Circle(Shape):
     def __init__(self, radius):
         """
         Initializes the Circle with a given radius.
+        Raises:
+            ValueError: If the radius is negative.
         """
+        if radius < 0:
+            raise ValueError("Radius cannot be negative")
         self.radius = radius
 
     def area(self):
@@ -80,7 +86,7 @@ class Rectangle(Shape):
 def shape_info(shape):
     """
     Prints the area and perimeter of a given shape using duck typing.
-    
+
     Args:
         shape: An object that implements area() and perimeter() methods.
     """
