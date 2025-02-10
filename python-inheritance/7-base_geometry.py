@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-instance method: def area(self): that raises Exception, ValueError or TypeError
+instance method: def area(self): that raises Exception,
+ValueError or TypeError
 """
 
 
