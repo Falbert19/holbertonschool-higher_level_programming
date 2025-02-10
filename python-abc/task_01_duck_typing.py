@@ -29,7 +29,6 @@ class Shape(ABC):
         """
         pass
 
-
 class Circle(Shape):
     """
     Concrete class representing a Circle, inheriting from Shape.
@@ -44,25 +43,24 @@ class Circle(Shape):
         """
         self.radius = radius
 
-    def area(self) -> float:
+    def area(self):
         """
         Returns the area of the circle.
         """
         return math.pi * (self.radius ** 2)
 
-    def perimeter(self) -> float:
+    def perimeter(self):
         """
         Returns the perimeter (circumference) of the circle.
         """
         return 2 * math.pi * self.radius
-
 
 class Rectangle(Shape):
     """
     Concrete class representing a Rectangle, inheriting from Shape.
     """
 
-    def __init__(self, width: float, height: float):
+    def __init__(self, width, height):
         """
         Initializes the Rectangle with a given width and height.
 
@@ -78,13 +76,13 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
 
-    def area(self) -> float:
+    def area(self):
         """
         Returns the area of the rectangle.
         """
         return self.width * self.height
 
-    def perimeter(self) -> float:
+    def perimeter(self):
         """
         Returns the perimeter of the rectangle.
         """
@@ -100,5 +98,5 @@ def shape_info(shape: Shape):
         shape (Shape): An object that implements area()
         and perimeter() methods.
     """
-    print(f"Area: {shape.area():.5f}")
-    print(f"Perimeter: {shape.perimeter():.5f}")
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
