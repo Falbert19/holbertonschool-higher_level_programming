@@ -45,6 +45,8 @@ class Circle(Shape):
         Raises:
             ValueError: If the radius is negative.
         """
+        if not isinstance(radius, (int, float)):
+            raise TypeError("Radius must be a number")
         if radius < 0:
             raise ValueError("Radius cannot be negative")
         self.radius = radius
