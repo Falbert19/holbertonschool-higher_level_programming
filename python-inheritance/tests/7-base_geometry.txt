@@ -1,4 +1,4 @@
-iBaseGeometry.area
+BaseGeometry.area
 
 >>> import importlib.util
 >>> import sys
@@ -8,6 +8,7 @@ iBaseGeometry.area
 >>> spec.loader.exec_module(base_geometry)
 >>> BaseGeometry = base_geometry.BaseGeometry
 >>> bg = BaseGeometry()
+
 >>> bg.area()
 Traceback (most recent call last):
     ...
