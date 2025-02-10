@@ -1,6 +1,12 @@
-BaseGeometry.area
+iBaseGeometry.area
 
->>> from 7-base_geometry import BaseGeometry
+>>> import importlib.util
+>>> import sys
+>>> spec = importlib.util.spec_from_file_location("base_geometry", "7-base_geometry.py")
+>>> base_geometry = importlib.util.module_from_spec(spec)
+>>> sys.modules["base_geometry"] = base_geometry
+>>> spec.loader.exec_module(base_geometry)
+>>> BaseGeometry = base_geometry.BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
@@ -27,4 +33,3 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: distance must be greater than 0
-
