@@ -41,15 +41,8 @@ class Circle(Shape):
 
         Args:
             radius (float): The radius of the circle.
-
-        Raises:
-            ValueError: If the radius is negative.
         """
-        if not isinstance(radius, (int, float)):
-            raise TypeError("Radius must be a number")
-        if radius < 0:
-            raise ValueError("Radius cannot be negative")
-        self.radius = float(radius)
+        self.radius = radius
 
     def area(self) -> float:
         """
