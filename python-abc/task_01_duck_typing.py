@@ -35,7 +35,7 @@ class Circle(Shape):
     Concrete class representing a Circle, inheriting from Shape.
     """
 
-    def __init__(self, radius: float):
+    def __init__(self, radius):
         """
         Initializes the Circle with a given radius.
 
