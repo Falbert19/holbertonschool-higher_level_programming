@@ -1,1 +1,46 @@
+MyList instantiation and print_sorted method
 
+>>> import importlib.util
+>>> import sys
+>>> spec = importlib.util.spec_from_file_location("my_list", "1-my_list.py")
+>>> my_list_module = importlib.util.module_from_spec(spec)
+>>> sys.modules["my_list"] = my_list_module
+>>> spec.loader.exec_module(my_list_module)
+>>> MyList = my_list_module.MyList
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> print(my_list)  # Ensure original list is unchanged
+[1, 4, 2, 3, 5]
+
+# Test with negative numbers
+>>> my_list2 = MyList()
+>>> my_list2.append(-3)
+>>> my_list2.append(-1)
+>>> my_list2.append(-4)
+>>> my_list2.append(-2)
+>>> my_list2.print_sorted()
+[-4, -3, -2, -1]
+
+# Test with an empty list
+>>> my_list3 = MyList()
+>>> my_list3.print_sorted()
+[]
+
+# Test with a list of identical numbers
+>>> my_list4 = MyList()
+>>> my_list4.append(5)
+>>> my_list4.append(5)
+>>> my_list4.append(5)
+>>> my_list4.print_sorted()
+[5, 5, 5]
