@@ -2,7 +2,8 @@
 """
 Module: from_json_string
 
-This module contains a function that returns a Python object from a JSON string.
+This module contains a function that returns a
+Python object from a JSON string.
 """
 import json
 
