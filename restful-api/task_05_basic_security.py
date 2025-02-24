@@ -106,5 +106,4 @@ def handle_needs_fresh_token_error():
 
 
 if __name__ == "__main__":
-    # Bind to all interfaces so that the API is accessible on your intranet.
     app.run(host="0.0.0.0", port=5000)
