@@ -27,7 +27,7 @@ jwt = JWTManager(app)
 @auth.verify_password
 def verify_password(username, password):
     user = users.get(username)
-    if user in users and check_password_hash(user["password"], password):
+    if user and check_password_hash(user["password"], password):
         return user
     return None
 
@@ -79,19 +79,19 @@ def handle_invalid_token_error(err):
 
 
 @jwt.expired_token_loader
-def handle_expired_token_error(jwt_header, jwt_payload):
+def handle_expired_token_error(err):
     return jsonify({"error": "Token has expired"}), 401
 
 
 @jwt.revoked_token_loader
-def handle_revoked_token_error(jwt_header, jwt_payload):
+def handle_revoked_token_error(err):
     return jsonify({"error": "Token has been revoked"}), 401
 
 
 @jwt.needs_fresh_token_loader
-def handle_needs_fresh_token_error():
+def handle_needs_fresh_token_error(err):
     return jsonify({"error": "Fresh token required"}), 401
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
