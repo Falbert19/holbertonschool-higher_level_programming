@@ -23,7 +23,7 @@ def status():
 
 @app.route('/users/<username>')
 def get_user(username):
-    user = user.get(username):
+    user = user.get(username)
     if user:
         return jsonify(user)
     else:
