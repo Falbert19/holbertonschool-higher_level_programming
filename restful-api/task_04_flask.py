@@ -24,7 +24,6 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# In-memory store for users. Prepopulate with sample data.
 users = {}
 
 
@@ -92,7 +91,9 @@ def add_user():
     data = request.get_json()
     if not data or "username" not in data:
         return jsonify({"error": "Username is required"}), 400
-
+    username = data["username"]
+    if username in users:
+        return jsonify({"error": "Username already exists"}), 400
     username = data["username"]
     users[username] = data
     return jsonify({"message": "User added", "user": data}), 201
