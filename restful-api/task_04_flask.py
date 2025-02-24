@@ -12,7 +12,7 @@ def home():
 
 
 @app.route('/data')
-def get_data():
+def data():
     return jsonify(list(users.keys()))
 
 
@@ -23,7 +23,7 @@ def status():
 
 @app.route('/users/<username>')
 def get_user(username):
-    user = user.get(username)
+    user = users.get(username)
     if user:
         return jsonify(user)
     else:
