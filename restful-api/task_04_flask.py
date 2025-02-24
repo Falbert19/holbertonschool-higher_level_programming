@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask, jsonify, request
 
 
@@ -12,7 +13,7 @@ def home():
 
 @app.route('/data')
 def data():
-    return jsonify(list(users.keys()))
+    return (jsonify(list(users.keys())))
 
 
 @app.route('/status')
@@ -24,7 +25,7 @@ def status():
 def get_user(username):
     user = users.get(username)
     if user:
-        return jsonify(user)
+        return(jsonify(user))
     else:
         return (jsonify({"error": "User not found"}), 404)
 
