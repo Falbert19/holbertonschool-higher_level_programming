@@ -20,7 +20,7 @@ This API provides the following endpoints:
         Otherwise, adds the user to the API and returns a 201 confirmation with the user data.
 """
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 
 app = Flask(__name__)
 
