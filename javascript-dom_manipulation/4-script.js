@@ -3,4 +3,3 @@ document.querySelector("#add_item").addEventListener("click", function () {
   newItem.textContent = "Item"
   document.querySelector(".my_list").appendChild(newItem)
 })
-  
